@@ -1,3 +1,6 @@
+import random
+
+
 # Exercise 0: Example
 #
 # This is a practice exercise to help you understand how to write code "inside" a provided Python function.
@@ -39,13 +42,13 @@ def print_greeting():
 
 def check_letter():
     # Your control flow logic goes here
-    letter = input("Enter a single letter (a-z or A-Z): ")
+    letter = input("Enter a single letter (a-z or A-Z): ").lower()
     
     if len(letter) != 1 or not letter.isalpha():
         print("Input must be a single letter.")
         return
 
-    vowels = "aeiouAEIOU"
+    vowels = "aeiou"
 
     if letter in vowels:
         print(f"The letter {letter} is a vowel.")
@@ -53,7 +56,7 @@ def check_letter():
         print(f"The letter {letter} is a consonant.")
 
 # Call the function
-# check_letter()
+check_letter()
 
 
 # Exercise 2: Old enough to vote?
@@ -255,7 +258,7 @@ def determine_season():
 
 def guess_number():
     # Your control flow logic goes here
-    set_num = 69
+    set_num = random.randint(1,100)
 
     attempts = 5
     print("Guess the number between 1 and 100. You have 5 attempts.")
